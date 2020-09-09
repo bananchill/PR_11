@@ -1,6 +1,6 @@
 ﻿namespace PR11_OrlovME
 {
-    partial class Form1
+    partial class myform
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,10 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // myform
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(444, 311);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(460, 350);
+            this.MinimumSize = new System.Drawing.Size(460, 350);
+            this.Name = "myform";
+            this.Text = "Танчики - ОрловМЕ";
+            this.Load += new System.EventHandler(this.myform_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

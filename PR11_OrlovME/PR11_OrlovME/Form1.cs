@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PR11_OrlovME
 {
-    public partial class Form1 : Form
+    public partial class myform : Form
     {
-        public Form1()
+        public myform()
         {
             InitializeComponent();
+        }
+
+        private void myform_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
