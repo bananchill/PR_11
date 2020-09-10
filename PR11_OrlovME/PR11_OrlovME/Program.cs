@@ -16,7 +16,7 @@ namespace PR11_OrlovME
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new myform());
+            Application.Run(new Controller_mainform());
         }
     }
 }
