@@ -28,17 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.StartstopButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // myform
+            // StartstopButton
+            // 
+            this.StartstopButton.Location = new System.Drawing.Point(315, 12);
+            this.StartstopButton.Name = "StartstopButton";
+            this.StartstopButton.Size = new System.Drawing.Size(75, 23);
+            this.StartstopButton.TabIndex = 0;
+            this.StartstopButton.Text = "play/stop";
+            this.StartstopButton.UseVisualStyleBackColor = true;
+            this.StartstopButton.Click += new System.EventHandler(this.StartstopButton_Click);
+            // 
+            // Controller_mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 311);
+            this.Controls.Add(this.StartstopButton);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(460, 350);
             this.MinimumSize = new System.Drawing.Size(460, 350);
-            this.Name = "myform";
+            this.Name = "Controller_mainform";
             this.Text = "Танчики - ОрловМЕ";
             this.Load += new System.EventHandler(this.myform_Load);
             this.ResumeLayout(false);
@@ -46,6 +58,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button StartstopButton;
     }
 }
 

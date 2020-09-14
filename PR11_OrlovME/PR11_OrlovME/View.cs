@@ -7,14 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace PR11_OrlovME
 {
-    public partial class View : UserControl
+    partial class View : UserControl
     {
-        public View()
+        Model model;
+        public View(Model model)
         {
             InitializeComponent();
+            this.model = model;
+
+        }
+
+
+
+        void Draw(PaintEventArgs e)
+        {
+            e.Graphics.DrawImage(model.tank.img, new Point(model.tank.x, model.tank.y));
+            Thread.Sleep(model.speedgame);
+            Invalidate();
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Draw(e);
         }
     }
 }
