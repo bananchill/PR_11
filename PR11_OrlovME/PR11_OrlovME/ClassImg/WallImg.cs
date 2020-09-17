@@ -5,16 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-
 namespace PR11_OrlovME
 {
-    class tanks
+    class WallImg
     {
-        public Image img = Properties.Resources.ta;
-        public int x, y;
-        public void run()
+        Image imgwall = Properties.Resources.wall;
+
+
+        public Image ImgWall
         {
-            x = ++y;
+            get { return imgwall; }
+            set { imgwall = value; }
         }
     }
 }

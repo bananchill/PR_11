@@ -24,8 +24,8 @@ namespace PR11_OrlovME
         public Controller_mainform(int sizeField, int amounttanks, int amountapples, int speedgame)
         {
             InitializeComponent();
-             model = new Model(sizeField, amounttanks, amountapples, speedgame);
-
+            model = new Model(sizeField, amounttanks, amountapples, speedgame);
+            model.gamestatus = gamestatus.stoping;
             view = new View(model);
             this.Controls.Add(view);
 
@@ -39,9 +39,36 @@ namespace PR11_OrlovME
 
         private void StartstopButton_Click(object sender, EventArgs e)
         {
-            modelplay = new Thread(model.play);
-            modelplay.Start();
+            if (model.gamestatus == gamestatus.playing)
+            {
+                modelplay.Abort();
+                model.gamestatus = gamestatus.stoping;
+            }
+            else
+            {
+                modelplay = new Thread(model.play);
+                modelplay.Start();
+                model.gamestatus = gamestatus.playing;
+                view.Invalidate();
+            }
 
+        }
+
+        private void Controller_mainform_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (modelplay != null)
+            {
+
+                modelplay.Abort();
+                model.gamestatus = gamestatus.stoping;
+            }
+            DialogResult dr = MessageBox.Show("Вы уверены , что хотите закончить игру", "Танчики - Орлов М Е", MessageBoxButtons.YesNoCancel);
+            if (dr == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
+            else
+                e.Cancel = true;
         }
     }
 }

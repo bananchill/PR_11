@@ -52,6 +52,7 @@
             this.MinimumSize = new System.Drawing.Size(460, 350);
             this.Name = "Controller_mainform";
             this.Text = "Танчики - ОрловМЕ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Controller_mainform_FormClosing);
             this.Load += new System.EventHandler(this.myform_Load);
             this.ResumeLayout(false);
 

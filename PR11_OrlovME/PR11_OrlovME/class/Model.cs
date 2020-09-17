@@ -13,7 +13,9 @@ namespace PR11_OrlovME
         public int amountapples;
         public int speedgame;
 
-        public tanks tank;
+        public Pudge tank;
+        public Wall wall;
+        public gamestatus gamestatus;
 
         public Model(int sizeField, int amounttanks, int amountapples, int speedgame)
         {
@@ -21,11 +23,12 @@ namespace PR11_OrlovME
             this.amounttanks = amounttanks;
             this.amountapples = amountapples;
             this.speedgame = speedgame;
-            tank = new tanks();
+            tank = new Pudge();
+            wall = new Wall();
         }
         public void play()
         {
-            while (true)
+            while (gamestatus == gamestatus.playing)
             {
                 tank.run();
                 Thread.Sleep(speedgame);

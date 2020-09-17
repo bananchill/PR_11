@@ -25,7 +25,11 @@ namespace PR11_OrlovME
 
         void Draw(PaintEventArgs e)
         {
-            e.Graphics.DrawImage(model.tank.img, new Point(model.tank.x, model.tank.y));
+            e.Graphics.DrawImage(model.wall.Img, new Point(20, 20));
+            e.Graphics.DrawImage(model.tank.Img, new Point(model.tank.X, model.tank.Y));
+            if (model.gamestatus != gamestatus.playing)
+                return;
+            
             Thread.Sleep(model.speedgame);
             Invalidate();
         }
