@@ -54,10 +54,10 @@
     </Compile>
     <Compile Include="class\gamestatus.cs" />
     <Compile Include="interface\ICollision.cs" />
-    <Compile Include="interface\IRun.cs" />
     <Compile Include="class\Model.cs" />
     <Compile Include="interface\ITurn.cs" />
     <Compile Include="interface\ITakeApple.cs" />
+    <Compile Include="IRun.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClassImg\PudgeImg.cs" />

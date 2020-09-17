@@ -8,14 +8,23 @@ using System.Drawing;
 
 namespace PR11_OrlovME
 {
-    class Pudge
+    class Pudge : IRun, ITurn
     {
-        
-        int x, y;
+
+        int x, y, direct_x, direct_y;
         Image img;
         PudgeImg pudgeImg = new PudgeImg();
-        public Pudge() {
+        static Random r;
+
+
+        public Pudge()
+        {
             img = pudgeImg.Img;
+            r = new Random();
+            x = 85;
+            y =85;
+            Direct_y = 0;
+            Direct_x = 1;
 
         }
         public Image Img
@@ -23,19 +32,83 @@ namespace PR11_OrlovME
             get { return img; }
 
         }
+
         public int X
         {
             get { return x; }
 
         }
+
         public int Y
         {
             get { return y; }
 
         }
+
+        public int Direct_x
+        {
+            get { return direct_x; }
+            set
+            {
+                if (value == 0 || value == 1 || value == -1)
+                    direct_y = value;
+                else
+                    direct_y = 0;
+
+            }
+        }
+
+        public int Direct_y
+        {
+            get { return direct_y; }
+            set
+            {
+                if (value == 0 || value == 1 || value == -1)
+                    direct_x = value;
+                else
+                    direct_x= 0;
+
+            }
+        }
+
         public void run()
         {
-            x = ++y;
+            y += Direct_x;
+            x += Direct_y;
+            if (Math.IEEERemainder(x, 45) == 0 && Math.IEEERemainder(y, 45) == 0)
+            {
+                Turn();
+            }
+            }
+
+        public void Turn()
+        {
+           
+                if (r.Next(5000) < 2500)  //по горизонтали
+                {
+                    if (Direct_x == 0)
+                    {
+                        Direct_y = 0;
+                        while (Direct_x == 0)
+                        {
+
+                            Direct_x = r.Next(-1, 2);
+                        }
+                    }                
+                else //по вертикали
+                {
+                    if (Direct_y == 0)
+                    {
+                        Direct_x = 0;
+                        while (Direct_y == 0)
+                        {
+                            Direct_y = r.Next(-1, 2);
+                        }
+                    }
+                }
+
+
+            }
         }
     }
 }

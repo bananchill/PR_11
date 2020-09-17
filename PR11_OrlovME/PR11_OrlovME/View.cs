@@ -22,14 +22,25 @@ namespace PR11_OrlovME
         }
 
 
+        void DrawWall(PaintEventArgs e)
+        {
+            for(int y=20; y< 260; y+=40)
+                for (int x = 20; x < 260; x +=40 )
+                    e.Graphics.DrawImage(model.wall.Img, new Point(x, y));
+        }
+
+        void DrawPudge(PaintEventArgs e)
+        {
+            e.Graphics.DrawImage(model.tank.Img, new Point(model.tank.X, model.tank.Y));
+        }
 
         void Draw(PaintEventArgs e)
         {
-            e.Graphics.DrawImage(model.wall.Img, new Point(20, 20));
-            e.Graphics.DrawImage(model.tank.Img, new Point(model.tank.X, model.tank.Y));
-            if (model.gamestatus != gamestatus.playing)
+            DrawWall(e);
+            DrawPudge(e);
+             if (model.gamestatus != gamestatus.playing)
                 return;
-            
+
             Thread.Sleep(model.speedgame);
             Invalidate();
         }
