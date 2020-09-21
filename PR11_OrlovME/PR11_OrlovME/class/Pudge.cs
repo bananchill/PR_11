@@ -21,8 +21,8 @@ namespace PR11_OrlovME
         {
             img = pudgeImg.Img;
             r = new Random();
-            x = 85;
-            y =85;
+            x = 80;
+            y = 80;
             Direct_y = 0;
             Direct_x = 1;
 
@@ -47,7 +47,7 @@ namespace PR11_OrlovME
 
         public int Direct_x
         {
-            get { return direct_x; }
+            get { return direct_y; }
             set
             {
                 if (value == 0 || value == 1 || value == -1)
@@ -60,7 +60,7 @@ namespace PR11_OrlovME
 
         public int Direct_y
         {
-            get { return direct_y; }
+            get { return direct_x; }
             set
             {
                 if (value == 0 || value == 1 || value == -1)
@@ -75,7 +75,7 @@ namespace PR11_OrlovME
         {
             y += Direct_x;
             x += Direct_y;
-            if (Math.IEEERemainder(x, 45) == 0 && Math.IEEERemainder(y, 45) == 0)
+            if (Math.IEEERemainder(x, 40) == 0 && Math.IEEERemainder(y, 40) == 0)
             {
                 Turn();
             }
