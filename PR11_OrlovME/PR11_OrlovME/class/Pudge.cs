@@ -8,17 +8,18 @@ using System.Drawing;
 
 namespace PR11_OrlovME
 {
-    class Pudge : IRun, ITurn
+    class Pudge : IRun, ITurn, ITransp
     {
-
+        int SizeField;
         int x, y, direct_x, direct_y;
         Image img;
         PudgeImg pudgeImg = new PudgeImg();
         static Random r;
 
 
-        public Pudge()
+        public Pudge(int sizefield)
         {
+            this.SizeField = sizefield;
             img = pudgeImg.Img;
             r = new Random();
             x = 80;
@@ -66,7 +67,7 @@ namespace PR11_OrlovME
                 if (value == 0 || value == 1 || value == -1)
                     direct_x = value;
                 else
-                    direct_x= 0;
+                    direct_x = 0;
 
             }
         }
@@ -78,23 +79,24 @@ namespace PR11_OrlovME
             if (Math.IEEERemainder(x, 40) == 0 && Math.IEEERemainder(y, 40) == 0)
             {
                 Turn();
+                Transparent();
             }
-            }
+        }
 
         public void Turn()
         {
-           
-                if (r.Next(5000) < 2500)  //по горизонтали
-                {
-                    if (Direct_x == 0)
-                    {
-                        Direct_y = 0;
-                        while (Direct_x == 0)
-                        {
 
-                            Direct_x = r.Next(-1, 2);
-                        }
-                    }                
+            if (r.Next(5000) < 2500)  //по горизонтали
+            {
+                if (Direct_x == 0)
+                {
+                    Direct_y = 0;
+                    while (Direct_x == 0)
+                    {
+
+                        Direct_x = r.Next(-1, 2);
+                    }
+                }
                 else //по вертикали
                 {
                     if (Direct_y == 0)
@@ -110,5 +112,23 @@ namespace PR11_OrlovME
 
             }
         }
+
+        public void Transparent()
+        {
+
+            if (x == -1)
+                x = SizeField - 21;
+            if (x == SizeField - 19)
+                x = 1;
+            if (y == -1)
+                y = SizeField - 21;
+            if (y == SizeField - 19)
+                y = 1;
+
+
+        }
+
+
+
     }
 }

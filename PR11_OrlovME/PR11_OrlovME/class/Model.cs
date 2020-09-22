@@ -23,7 +23,7 @@ namespace PR11_OrlovME
             this.amounttanks = amounttanks;
             this.amountapples = amountapples;
             this.speedgame = speedgame;
-            tank = new Pudge();
+            tank = new Pudge(sizeField);
             wall = new Wall();
         }
         public void play()

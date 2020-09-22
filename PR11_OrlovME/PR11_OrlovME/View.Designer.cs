@@ -37,7 +37,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ForeColor = System.Drawing.Color.Coral;
             this.Name = "View";
-            this.Size = new System.Drawing.Size(300, 300);
+            this.Size = new System.Drawing.Size(260, 260);
             this.ResumeLayout(false);
 
         }
