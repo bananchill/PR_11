@@ -58,7 +58,7 @@
     <Compile Include="interface\ITurn.cs" />
     <Compile Include="interface\ITakeApple.cs" />
     <Compile Include="interface\IRun.cs" />
-    <Compile Include="ITransp.cs" />
+    <Compile Include="interface\ITransp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClassImg\PudgeImg.cs" />
