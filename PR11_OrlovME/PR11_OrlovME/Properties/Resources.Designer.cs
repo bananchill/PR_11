@@ -63,9 +63,9 @@ namespace PR11_OrlovME.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap trank {
+        internal static System.Drawing.Bitmap trankDown {
             get {
-                object obj = ResourceManager.GetObject("trank", resourceCulture);
+                object obj = ResourceManager.GetObject("trankDown", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace PR11_OrlovME.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap trank2 {
+        internal static System.Drawing.Bitmap trankup {
             get {
-                object obj = ResourceManager.GetObject("trank2", resourceCulture);
+                object obj = ResourceManager.GetObject("trankup", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

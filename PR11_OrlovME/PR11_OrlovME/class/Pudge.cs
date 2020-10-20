@@ -79,8 +79,10 @@ namespace PR11_OrlovME
             if (Math.IEEERemainder(x, 40) == 0 && Math.IEEERemainder(y, 40) == 0)
             {
                 Turn();
-                Transparent();
+               
             }
+            Transparent();
+
         }
 
         public void Turn()
@@ -116,13 +118,13 @@ namespace PR11_OrlovME
         public void Transparent()
         {
 
-            if (x == -1)
-                x = SizeField - 21;
-            if (x == SizeField - 19)
+            if (x <= -1)
+                x = SizeField - 22;
+                if (x == SizeField - 20)
                 x = 1;
-            if (y == -1)
+            if (y <= 0)
                 y = SizeField - 21;
-            if (y == SizeField - 19)
+            if (y == SizeField - 22)
                 y = 1;
 
 

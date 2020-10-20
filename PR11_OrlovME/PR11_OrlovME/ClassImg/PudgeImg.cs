@@ -9,7 +9,7 @@ namespace PR11_OrlovME
 {
     class PudgeImg
     {
-        Image img = Properties.Resources.trank;
+        Image img = Properties.Resources.trankDown;
 
 
         public Image Img
