@@ -118,13 +118,58 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="trankDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trank1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tank1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tank1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="trankup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trank2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tank2t" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tank2t.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tank3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tank3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tank4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tank4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tankdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tankdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tankdown2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tankdown2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tankdown3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tankdown3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tankdown_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tankdown 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tanklef2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tanklef2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tankleft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tankleft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tankleft3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tankleft3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tankleft4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tankleft4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tankright" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tankright.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tankright2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tankright2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tankright3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tankright3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tankright4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tankright4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="walll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Image1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

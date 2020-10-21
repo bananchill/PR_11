@@ -14,7 +14,7 @@ namespace PR11_OrlovME
         public int speedgame;
 
         public Pudge tank;
-        public Wall wall;
+        public Wall walll;
         public gamestatus gamestatus;
 
         public Model(int sizeField, int amounttanks, int amountapples, int speedgame)
@@ -24,7 +24,7 @@ namespace PR11_OrlovME
             this.amountapples = amountapples;
             this.speedgame = speedgame;
             tank = new Pudge(sizeField);
-            wall = new Wall();
+            walll = new Wall();
         }
         public void play()
         {

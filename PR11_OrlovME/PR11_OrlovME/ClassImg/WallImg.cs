@@ -9,7 +9,7 @@ namespace PR11_OrlovME
 {
     class WallImg
     {
-        Image imgwall = Properties.Resources.wall;
+        Image imgwall = Properties.Resources.walll;
 
 
         public Image ImgWall
