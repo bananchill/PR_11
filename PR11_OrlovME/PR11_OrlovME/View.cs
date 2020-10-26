@@ -29,15 +29,22 @@ namespace PR11_OrlovME
                     e.Graphics.DrawImage(model.walll.Img, new Point(x, y));
         }
 
-        void DrawPudge(PaintEventArgs e)
+        public void DrawPudge(PaintEventArgs e)
         {
-            e.Graphics.DrawImage(model.tank.CurrentImg, new Point(model.tank.X, model.tank.Y));
+            foreach (Pudge t in model.Tanks)
+            e.Graphics.DrawImage(t.CurrentImg, new Point(t.X, t.Y));
         }
-
+        public void DrawCoin(PaintEventArgs e)
+        {
+            foreach (Coin t in model.Coins)
+                e.Graphics.DrawImage(t.Img, new Point(t.X, t.Y));
+        }
         void Draw(PaintEventArgs e)
         {
             DrawWall(e);
+            DrawCoin(e);
             DrawPudge(e);
+            
              if (model.gamestatus != gamestatus.playing)
                 return;
 

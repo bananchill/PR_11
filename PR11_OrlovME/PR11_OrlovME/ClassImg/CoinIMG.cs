@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
 
 namespace PR11_OrlovME
 {
-    class WallImg
+    class CoinIMG
     {
-        Image imgwall = Properties.Resources.walll;
+
+        Image img = Properties.Resources.coin;
 
 
-        public Image ImgWall
+        public Image ImgCoin
         {
-            get { return imgwall; }
+            get { return img; }
         }
     }
 }

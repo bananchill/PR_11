@@ -16,21 +16,31 @@ namespace PR11_OrlovME
         Image currentimg;
 
         PudgeImg pudgeImg = new PudgeImg();
+
         static Random r;
 
 
-        public Pudge(int sizefield)
+        public Pudge(int sizefield, int x, int y)
         {
             this.SizeField = sizefield;
             img = pudgeImg.ImgDown;
+            r = new Random();
 
-            x = 80;
-            y = 80;
-            Direct_y = 0;
-            Direct_x = 1;
+            this.x = x;
+            this.y = y;
+
+            Direct_x = r.Next(-1, 2);
+            if (Direct_x == 0)
+            {
+                Direct_y = 0;
+                while (Direct_y == 0)
+                    Direct_y = r.Next(-1, 2);
+            }
+            else
+                Direct_y = 0;
+
             PutImg();
             PutCurrentImg();
-
         }
         public Image CurrentImg
         {
@@ -79,7 +89,7 @@ namespace PR11_OrlovME
 
             }
         }
-        
+
         public void run()
         {
             y += Direct_x;
@@ -161,7 +171,13 @@ namespace PR11_OrlovME
             if (Direct_y == -1)
                 img = pudgeImg.Imgleft;
         }
-
+        public void TurnArround()
+        {
+            // Разворот на 180 
+            Direct_x = -1 * Direct_x;
+            Direct_y = -1 * Direct_y;
+            PutImg();
+        }
 
     }
 }

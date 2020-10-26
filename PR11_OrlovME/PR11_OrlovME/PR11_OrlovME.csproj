@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="class\Coin.cs" />
+    <Compile Include="ClassImg\CoinIMG.cs" />
     <Compile Include="Controller.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +61,7 @@
     <Compile Include="interface\ITakeApple.cs" />
     <Compile Include="interface\IRun.cs" />
     <Compile Include="interface\ITransp.cs" />
+    <Compile Include="IPicture.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClassImg\PudgeImg.cs" />
@@ -101,9 +104,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\wall.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Resources\anim\down\tankdown 4.png" />
     <Content Include="Resources\anim\down\tankdown.png" />
     <Content Include="Resources\anim\down\tankdown2.png" />
@@ -120,6 +120,8 @@
     <Content Include="Resources\anim\up\tank2t.png" />
     <Content Include="Resources\anim\up\tank3.png" />
     <Content Include="Resources\anim\up\tank4.png" />
+    <None Include="Resources\coin.gif" />
+    <None Include="Resources\coin.bmp" />
     <None Include="Resources\Image1.gif" />
     <None Include="Resources\tanklef2.png" />
     <None Include="Resources\tank4.png" />

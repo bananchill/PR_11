@@ -30,22 +30,18 @@ namespace PR11_OrlovME
         public Image[] ImgDown
         {
             get { return imgright; }
-            set { imgright = value; }
         }
         public Image[] Imgup
         {
             get { return imgup; }
-            set { imgup = value; }
         }
         public Image[] Imgleft
         {
             get { return imgleft; }
-            set { imgleft = value; }
         }
         public Image[] Imgright
         {
             get { return imgdown; }
-            set { imgdown = value; }
         }   
 
     }
