@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PR11_OrlovME
 {
-    class Coin
+    class Coin : IPicture
     {
         CoinIMG coinimg = new CoinIMG();
         Image img;

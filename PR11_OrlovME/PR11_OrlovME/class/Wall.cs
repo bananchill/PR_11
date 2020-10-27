@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace PR11_OrlovME
 {
-    class Wall
+    class Wall : IPicture
     {
         WallImg WallImg = new WallImg();
         Image Imgwall;

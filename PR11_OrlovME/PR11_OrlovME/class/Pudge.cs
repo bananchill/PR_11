@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace PR11_OrlovME
 {
-    class Pudge : IRun, ITurn, ITransp
+    class Pudge : IRun, ITurn //, IPicture
     {
         int SizeField;
         int x, y, direct_x, direct_y;

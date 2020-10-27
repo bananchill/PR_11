@@ -9,6 +9,7 @@ namespace PR11_OrlovME
     interface ITurn
     {
         void Turn();
+
         void TurnAround();
     }
 }

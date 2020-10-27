@@ -55,13 +55,12 @@
       <DependentUpon>Controller.cs</DependentUpon>
     </Compile>
     <Compile Include="class\gamestatus.cs" />
-    <Compile Include="interface\ICollision.cs" />
     <Compile Include="class\Model.cs" />
+    <Compile Include="ICurrentPicture.cs" />
     <Compile Include="interface\ITurn.cs" />
-    <Compile Include="interface\ITakeApple.cs" />
     <Compile Include="interface\IRun.cs" />
     <Compile Include="interface\ITransp.cs" />
-    <Compile Include="IPicture.cs" />
+    <Compile Include="interface\IPicture.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClassImg\PudgeImg.cs" />
