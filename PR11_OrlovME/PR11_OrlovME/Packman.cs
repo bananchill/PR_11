@@ -5,43 +5,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-
 namespace PR11_OrlovME
 {
-    class Pudge : IRun, ITurn, ITransp,ICurrentPicture, ITurnAround //, IPicture
+    class Packman : IRun, ITurn, ITransp, ICurrentPicture
     {
         int SizeField;
-        int x, y, direct_x, direct_y;
+        int x, y, direct_x, direct_y, nextDirect_x, nextDirect_y;
         Image[] img;
         Image currentimg;
 
-        PudgeImg pudgeImg = new PudgeImg();
+        PackIMG packImg = new PackIMG();
 
-        static Random r;
-
-
-        public Pudge(int sizefield, int x, int y)
+        public Packman(int sizefield)
         {
             this.SizeField = sizefield;
-            img = pudgeImg.ImgDown;
-            r = new Random();
+            img = packImg.ImgDown;
 
-            this.x = x;
-            this.y = y;
+            this.x = 120;
+            this.y = 240;
 
-            Direct_x = r.Next(-1, 2);
-            if (Direct_x == 0)
-            {
-                Direct_y = 0;
-                while (Direct_y == 0)
-                    Direct_y = r.Next(-1, 2);
-            }
-            else
-                Direct_y = 0;
+            nextDirect_x = -1;
+            nextDirect_y = 0;
 
             PutImg();
             PutCurrentImg();
         }
+
         public Image CurrentImg
         {
             get { return currentimg; }
@@ -63,7 +52,6 @@ namespace PR11_OrlovME
             get { return y; }
 
         }
-
         public int Direct_x
         {
             get { return direct_y; }
@@ -76,7 +64,30 @@ namespace PR11_OrlovME
 
             }
         }
+        public int NextDirect_x
+        {
+            get { return nextDirect_x; }
+            set
+            {
+                if (value == 0 || value == 1 || value == -1)
+                    nextDirect_y = value;
+                else
+                    nextDirect_y = 0;
 
+            }
+        }
+        public int NextDirect_y
+        {
+            get { return nextDirect_y; }
+            set
+            {
+                if (value == 0 || value == 1 || value == -1)
+                    nextDirect_x = value;
+                else
+                    nextDirect_x = 0;
+
+            }
+        }
         public int Direct_y
         {
             get { return direct_x; }
@@ -89,6 +100,8 @@ namespace PR11_OrlovME
 
             }
         }
+
+
 
         public void run()
         {
@@ -103,42 +116,23 @@ namespace PR11_OrlovME
             Transparent();
 
         }
+
         int k = 0;
         private void PutCurrentImg()
         {
             currentimg = img[k];
             k++;
-            if (k == 4)
+            if (k <= 4)
                 k = 0;
         }
 
         public void Turn()
         {
+            Direct_x = NextDirect_x;
+            Direct_y = NextDirect_y;
 
-            if (r.Next(5000) < 2500)  //по горизонтали
-            {
-                if (Direct_x == 0)
-                {
-                    Direct_y = 0;
-                    while (Direct_x == 0)
-                    {
+            PutImg();
 
-                        Direct_x = r.Next(-1, 2);
-                    }
-                }
-                else //по вертикали
-                {
-                    if (Direct_y == 0)
-                    {
-                        Direct_x = 0;
-                        while (Direct_y == 0)
-                        {
-                            Direct_y = r.Next(-1, 2);
-                        }
-                    }
-                }
-                PutImg();
-            }
 
         }
 
@@ -163,13 +157,13 @@ namespace PR11_OrlovME
         {
 
             if (Direct_x == 1)
-                img = pudgeImg.Imgright;
+                img = packImg.Imgright;
             if (Direct_x == -1)
-                img = pudgeImg.Imgup;
+                img = packImg.Imgup;
             if (Direct_y == 1)
-                img = pudgeImg.ImgDown;
+                img = packImg.ImgDown;
             if (Direct_y == -1)
-                img = pudgeImg.Imgleft;
+                img = packImg.Imgleft;
         }
         public void TurnArround()
         {

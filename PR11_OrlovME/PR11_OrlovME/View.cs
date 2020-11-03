@@ -44,12 +44,19 @@ namespace PR11_OrlovME
             DrawWall(e);
             DrawCoin(e);
             DrawPudge(e);
+            DrawPack(e);
             
              if (model.gamestatus != gamestatus.playing)
                 return;
 
             Thread.Sleep(model.speedgame);
             Invalidate();
+        }
+
+        private void DrawPack(PaintEventArgs e)
+        {
+           
+                e.Graphics.DrawImage(model.PAck.CurrentImg, new Point(model.PAck.X, model.PAck.Y));
         }
 
         protected override void OnPaint(PaintEventArgs e)

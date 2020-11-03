@@ -12,14 +12,15 @@ namespace PR11_OrlovME
         CoinIMG coinimg = new CoinIMG();
         Image img;
         int x, y;
-        public int X {
+        public int X
+        {
             get { return x; }
         }
         public int Y
         {
             get { return y; }
         }
-        public Coin(int x,int y)
+        public Coin(int x, int y)
         {
             this.x = x;
             this.y = y;

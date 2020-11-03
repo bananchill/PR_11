@@ -40,6 +40,8 @@
             this.StartstopButton.Text = "play/stop";
             this.StartstopButton.UseVisualStyleBackColor = true;
             this.StartstopButton.Click += new System.EventHandler(this.StartstopButton_Click);
+            this.StartstopButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Controller_mainform_KeyPress);
+            this.StartstopButton.Leave += new System.EventHandler(this.StartstopButton_Leave);
             // 
             // Controller_mainform
             // 
@@ -54,6 +56,7 @@
             this.Text = "Танчики - ОрловМЕ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Controller_mainform_FormClosing);
             this.Load += new System.EventHandler(this.myform_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Controller_mainform_KeyPress);
             this.ResumeLayout(false);
 
         }

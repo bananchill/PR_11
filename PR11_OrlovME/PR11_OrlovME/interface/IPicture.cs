@@ -9,8 +9,9 @@ namespace PR11_OrlovME
 {
     interface IPicture
     {
-        Image img {
+        Image Img
+        {
             get;
         }
-     }
+    }
 }

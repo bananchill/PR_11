@@ -15,6 +15,12 @@ namespace PR11_OrlovME
 
         List<Pudge> tanks;
         List<Coin> coins;
+        Packman packman;
+
+      
+
+
+
         public Wall walll;
         public gamestatus gamestatus;
 
@@ -30,7 +36,11 @@ namespace PR11_OrlovME
             get { return coins; }
 
         }
+        internal Packman PAck
+        {
+            get { return packman; }
 
+        }
         public Model(int sizeField, int amounttanks, int amountapples, int speedgame)
         {
             this.sizeField = sizeField; // передаем в поля переданные данные
@@ -42,7 +52,9 @@ namespace PR11_OrlovME
             coins = new List<Coin>();
             CreateCoin();
             CreateTanks();
+
             walll = new Wall();
+            packman = new Packman(sizeField);
         }
 
         private void CreateCoin()
@@ -96,6 +108,7 @@ namespace PR11_OrlovME
             {
                 foreach (Pudge t in tanks)
                     t.run();
+                packman.run();
                 for (int i = 0; i < tanks.Count - 1; i++)
                     for (int j = i + 1; j < tanks.Count; j++)
                         if (

@@ -10,6 +10,5 @@ namespace PR11_OrlovME
     {
         void Turn();
 
-        void TurnAround();
     }
 }

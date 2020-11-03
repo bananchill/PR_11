@@ -70,5 +70,86 @@ namespace PR11_OrlovME
             else
                 e.Cancel = true;
         }
+
+        private void Controller_mainform_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            switch (e.KeyChar)
+            {
+                case 'a':
+                case 'ф':
+                case 'A':
+                case 'Ф':
+                    {
+                        model.PAck.NextDirect_x = -1;
+                        model.PAck.NextDirect_y = 0;
+                    }
+                    break;
+                case 'd':
+                case 'в':
+                case 'D':
+                case 'В':
+                    {
+                        model.PAck.NextDirect_x = 1;
+                        model.PAck.NextDirect_y = 0;
+                    }
+                    break;
+                case 'w':
+                case 'ц':
+                case 'W':
+                case 'Ц':
+                    {
+                        model.PAck.NextDirect_x = 0;
+                        model.PAck.NextDirect_y = -1;
+                    }
+                    break;
+                case 's':
+                case 'ы':
+                case 'S':
+                case 'Ы':
+                    {
+                        model.PAck.NextDirect_x = 0;
+                        model.PAck.NextDirect_y = 1;
+                    }
+                    break;
+                default:
+                    //{
+
+                    //    model.Projectile.Direct_x = model.PAck.Direct_x;
+                    //    model.Projectile.Direct_y = model.PAck.Direct_y;
+
+                    //    model.Projectile.X = model.PAck.X;
+                    //    model.Projectile.Y = model.PAck.Y;
+
+                    //    if (model.Sonic.Direct_y == -1)
+                    //    {
+                    //        model.Projectile.X = model.PAck.X + 2;
+                    //        model.Projectile.Y = model.PAck.Y;
+
+                    //    }
+                    //    if (model.Sonic.Direct_y == 1)
+                    //    {
+                    //        model.Projectile.X = model.PAck.X + 2;
+                    //        model.Projectile.Y = model.PAck.Y;
+                    //    }
+                    //if (model.Sonic.Direct_x == -1)
+                    //{
+                    //    model.Projectile.X = model.Sonic.X;
+                    //    model.Projectile.Y = model.Sonic.Y + 10;
+                    //}
+                    //if (model.Sonic.Direct_x == 1)
+                    //{
+                    //    model.Projectile.X = model.Sonic.X + 20;
+                    //    model.Projectile.Y = model.Sonic.Y + 10;
+                    //}
+
+                    //}
+                    break;
+            }
+        }
+
+        private void StartstopButton_Leave(object sender, EventArgs e)
+        {
+            StartstopButton.Focus();
+        }
     }
 }
