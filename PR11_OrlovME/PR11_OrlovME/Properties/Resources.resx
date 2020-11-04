@@ -223,4 +223,43 @@
   <data name="Packup3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pack4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Hunterdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\hunteranim\down\hunterdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hunterdown2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\hunteranim\down\hunterdown2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hunterdown3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\hunteranim\down\hunterdown3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hunterleft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\hunteranim\left\hunterleft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hunterleft2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\hunteranim\left\hunterleft2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hunterleft3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\hunteranim\left\hunterleft3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hunterleft4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\hunteranim\right\hunterleft4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hunterright" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\hunteranim\right\hunterright.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hunterright2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\hunteranim\right\hunterright2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hunterright3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\hunteranim\right\hunterright3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hunterup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\hunteranim\up\hunterup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hunterup2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\hunteranim\up\hunterup2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hunterup3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\hunteranim\up\hunterup3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -8,18 +8,29 @@ using System.Drawing;
 
 namespace PR11_OrlovME
 {
-    class Pudge : IRun, ITurn, ITransp,ICurrentPicture, ITurnAround //, IPicture
+    class Pudge : IRun, ITurn, ITransp, ICurrentPicture, ITurnAround //, IPicture
     {
-        int SizeField;
-        int x, y, direct_x, direct_y;
-        Image[] img;
-        Image currentimg;
+        protected int SizeField;
+        protected int x, y, direct_x, direct_y;
+        protected Image[] img;
+        protected Image currentimg;
 
         PudgeImg pudgeImg = new PudgeImg();
 
-        static Random r;
+        protected static Random r;
+         protected int k = 0;
+    private void PutImg()
+        {
 
-
+            if (Direct_x == 1)
+                img = pudgeImg.Imgright;
+            if (Direct_x == -1)
+                img = pudgeImg.Imgup;
+            if (Direct_y == 1)
+                img = pudgeImg.ImgDown;
+            if (Direct_y == -1)
+                img = pudgeImg.Imgleft;
+        }
         public Pudge(int sizefield, int x, int y)
         {
             this.SizeField = sizefield;
@@ -42,10 +53,12 @@ namespace PR11_OrlovME
             PutImg();
             PutCurrentImg();
         }
+
         public Image CurrentImg
         {
             get { return currentimg; }
         }
+
         public Image[] Img
         {
             get { return img; }
@@ -103,8 +116,8 @@ namespace PR11_OrlovME
             Transparent();
 
         }
-        int k = 0;
-        private void PutCurrentImg()
+
+        protected void PutCurrentImg()
         {
             currentimg = img[k];
             k++;
@@ -142,8 +155,6 @@ namespace PR11_OrlovME
 
         }
 
-
-
         public void Transparent()
         {
 
@@ -159,18 +170,7 @@ namespace PR11_OrlovME
 
 
         }
-        public void PutImg()
-        {
 
-            if (Direct_x == 1)
-                img = pudgeImg.Imgright;
-            if (Direct_x == -1)
-                img = pudgeImg.Imgup;
-            if (Direct_y == 1)
-                img = pudgeImg.ImgDown;
-            if (Direct_y == -1)
-                img = pudgeImg.Imgleft;
-        }
         public void TurnArround()
         {
             // Разворот на 180 

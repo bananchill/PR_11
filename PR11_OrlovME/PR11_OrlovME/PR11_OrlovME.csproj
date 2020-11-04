@@ -56,6 +56,8 @@
     </Compile>
     <Compile Include="class\gamestatus.cs" />
     <Compile Include="class\Model.cs" />
+    <Compile Include="class\Hunter.cs" />
+    <Compile Include="ClassImg\HunterIMG.cs" />
     <Compile Include="interface\ICurrentPicture.cs" />
     <Compile Include="interface\ITurn.cs" />
     <Compile Include="interface\IRun.cs" />
@@ -122,6 +124,19 @@
     <Content Include="Resources\anim\up\tank2t.png" />
     <Content Include="Resources\anim\up\tank3.png" />
     <Content Include="Resources\anim\up\tank4.png" />
+    <Content Include="Resources\hunteranim\down\Hunterdown.png" />
+    <Content Include="Resources\hunteranim\down\Hunterdown2.png" />
+    <Content Include="Resources\hunteranim\down\Hunterdown3.png" />
+    <Content Include="Resources\hunteranim\left\Hunterleft.png" />
+    <Content Include="Resources\hunteranim\left\Hunterleft2.png" />
+    <Content Include="Resources\hunteranim\left\Hunterleft3.png" />
+    <Content Include="Resources\hunteranim\right\Hunterleft4.png" />
+    <Content Include="Resources\hunteranim\right\Hunterright.png" />
+    <Content Include="Resources\hunteranim\right\Hunterright2.png" />
+    <Content Include="Resources\hunteranim\right\Hunterright3.png" />
+    <Content Include="Resources\hunteranim\up\Hunterup.png" />
+    <Content Include="Resources\hunteranim\up\Hunterup2.png" />
+    <Content Include="Resources\hunteranim\up\Hunterup3.png" />
     <None Include="Resources\Pack53.gif" />
     <None Include="Resources\Pack43.gif" />
     <None Include="Resources\Pack33.gif" />

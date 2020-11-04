@@ -89,10 +89,16 @@ namespace PR11_OrlovME
 
         private void CreateTanks()
         {
+
+
             //// Задание начальных координат танка
             int x, y;
             while (tanks.Count < amounttanks)
             {
+
+                if (tanks.Count == 0)
+                    tanks.Add(new Hunter(sizeField, r.Next(6) * 40, r.Next(6) * 40));
+
                 x = r.Next(6) * 40;
                 y = r.Next(6) * 40;
 
@@ -114,10 +120,16 @@ namespace PR11_OrlovME
         {
             while (gamestatus == gamestatus.playing)
             {
+                Thread.Sleep(speedgame);
 
-                foreach (Pudge t in tanks)
-                    t.run();
+                ((Hunter)tanks[0]).Runn(packman.X,packman.Y);
+                for(int i =1; i < tanks.Count; i++)
+                    tanks[i].run();
+
+
                 packman.run();
+
+
                 for (int i = 0; i < tanks.Count - 1; i++)
                     for (int j = i + 1; j < tanks.Count; j++)
                         if (
@@ -131,7 +143,7 @@ namespace PR11_OrlovME
                             tanks[j].TurnArround();
                         }
 
-                for (int i = 0; i < tanks.Count ; i++)
+                for (int i = 0; i < tanks.Count; i++)
                     if (
                                ((Math.Abs(tanks[i].X - packman.X) <= 19) && (tanks[i].Y == packman.Y))
                            ||
@@ -146,19 +158,17 @@ namespace PR11_OrlovME
 
                 for (int i = 0; i < Coins.Count; i++)
                 {
-                    if (PAck.X == Coins[i].X && PAck.Y == Coins[i].Y)
+                    if (Math.Abs(PAck.X - Coins[i].X) < 4 && Math.Abs(PAck.Y - Coins[i].Y) < 4)
                     {
-
-                        collectionsapple++;
-                        coins[i] = new Coin((collectionsapple-1)*30, 280);
-                        CreateCoin(collectionsapple);
+                        coins[i] = new Coin((collectionsapple - 1) * 30, 280);
+                        CreateCoin(++collectionsapple);
 
 
                     }
                 }
 
-                if (collectionsapple > amountapples) gamestatus = gamestatus.winner; 
-                Thread.Sleep(speedgame);
+                if (collectionsapple > amountapples) gamestatus = gamestatus.winner;
+                
             }
 
         }
