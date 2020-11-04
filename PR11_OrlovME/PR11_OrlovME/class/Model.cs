@@ -11,13 +11,17 @@ namespace PR11_OrlovME
         public int sizeField;
         int amounttanks;
         public int amountapples;
+
+        int collectionsapple;
+
+
         public int speedgame;
 
         List<Pudge> tanks;
         List<Coin> coins;
         Packman packman;
 
-      
+
 
 
 
@@ -46,6 +50,7 @@ namespace PR11_OrlovME
             this.sizeField = sizeField; // передаем в поля переданные данные
             this.amounttanks = amounttanks;
             r = new Random();
+            collectionsapple = 0;
             this.amountapples = amountapples;
             this.speedgame = speedgame;
             tanks = new List<Pudge>();
@@ -56,11 +61,14 @@ namespace PR11_OrlovME
             walll = new Wall();
             packman = new Packman(sizeField);
         }
-
-        private void CreateCoin()
+        private void CreateCoin() //перегрузка
+        {
+            CreateCoin(0);
+        }
+        private void CreateCoin(int newapple)
         {
             int x, y;
-            while (coins.Count < amountapples)
+            while (coins.Count < amountapples + newapple)
             {
                 x = r.Next(7) * 40;
                 y = r.Next(7) * 40;
@@ -74,7 +82,7 @@ namespace PR11_OrlovME
                         break;
                     }
                 if (flag)
-                    coins.Add(new Coin( x, y));
+                    coins.Add(new Coin(x, y));
 
             }
         }
@@ -106,6 +114,7 @@ namespace PR11_OrlovME
         {
             while (gamestatus == gamestatus.playing)
             {
+
                 foreach (Pudge t in tanks)
                     t.run();
                 packman.run();
@@ -122,6 +131,33 @@ namespace PR11_OrlovME
                             tanks[j].TurnArround();
                         }
 
+                for (int i = 0; i < tanks.Count ; i++)
+                    if (
+                               ((Math.Abs(tanks[i].X - packman.X) <= 19) && (tanks[i].Y == packman.Y))
+                           ||
+                               ((Math.Abs(tanks[i].Y - packman.Y) <= 19) && (tanks[i].X == packman.X))
+                           ||
+                               ((Math.Abs(tanks[i].X - packman.X) <= 19) && (Math.Abs(tanks[i].Y - packman.Y) <= 19)))
+                    {
+                        gamestatus = gamestatus.loozer;
+                    }
+
+
+
+                for (int i = 0; i < Coins.Count; i++)
+                {
+                    if (PAck.X == Coins[i].X && PAck.Y == Coins[i].Y)
+                    {
+
+                        collectionsapple++;
+                        coins[i] = new Coin((collectionsapple-1)*30, 280);
+                        CreateCoin(collectionsapple);
+
+
+                    }
+                }
+
+                if (collectionsapple > amountapples) gamestatus = gamestatus.winner; 
                 Thread.Sleep(speedgame);
             }
 

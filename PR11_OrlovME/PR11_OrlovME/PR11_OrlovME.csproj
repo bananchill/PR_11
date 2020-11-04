@@ -56,14 +56,14 @@
     </Compile>
     <Compile Include="class\gamestatus.cs" />
     <Compile Include="class\Model.cs" />
-    <Compile Include="ICurrentPicture.cs" />
+    <Compile Include="interface\ICurrentPicture.cs" />
     <Compile Include="interface\ITurn.cs" />
     <Compile Include="interface\IRun.cs" />
     <Compile Include="interface\ITransp.cs" />
     <Compile Include="interface\IPicture.cs" />
-    <Compile Include="ITurnAround.cs" />
-    <Compile Include="PackIMG.cs" />
-    <Compile Include="Packman.cs" />
+    <Compile Include="interface\ITurnAround.cs" />
+    <Compile Include="ClassImg\PackIMG.cs" />
+    <Compile Include="class\Packman.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClassImg\PudgeImg.cs" />

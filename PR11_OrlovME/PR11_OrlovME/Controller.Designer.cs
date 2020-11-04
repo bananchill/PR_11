@@ -37,7 +37,7 @@
             this.StartstopButton.Name = "StartstopButton";
             this.StartstopButton.Size = new System.Drawing.Size(75, 23);
             this.StartstopButton.TabIndex = 0;
-            this.StartstopButton.Text = "play/stop";
+            this.StartstopButton.Text = "play/pause";
             this.StartstopButton.UseVisualStyleBackColor = true;
             this.StartstopButton.Click += new System.EventHandler(this.StartstopButton_Click);
             this.StartstopButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Controller_mainform_KeyPress);
@@ -47,11 +47,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 311);
+            this.ClientSize = new System.Drawing.Size(444, 331);
             this.Controls.Add(this.StartstopButton);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(460, 350);
-            this.MinimumSize = new System.Drawing.Size(460, 350);
+            this.MaximumSize = new System.Drawing.Size(460, 370);
+            this.MinimumSize = new System.Drawing.Size(460, 370);
             this.Name = "Controller_mainform";
             this.Text = "Танчики - ОрловМЕ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Controller_mainform_FormClosing);

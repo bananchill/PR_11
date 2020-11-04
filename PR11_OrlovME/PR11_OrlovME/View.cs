@@ -36,8 +36,8 @@ namespace PR11_OrlovME
         }
         public void DrawCoin(PaintEventArgs e)
         {
-            foreach (Coin t in model.Coins)
-                e.Graphics.DrawImage(t.Img, new Point(t.X, t.Y));
+            for(int i=0; i < model.Coins.Count; i++)
+                e.Graphics.DrawImage(model.Coins[i].Img, new Point(model.Coins[i].X, model.Coins[i].Y));
         }
         void Draw(PaintEventArgs e)
         {
