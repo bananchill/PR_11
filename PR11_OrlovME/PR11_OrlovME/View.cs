@@ -45,6 +45,7 @@ namespace PR11_OrlovME
             DrawCoin(e);
             DrawPudge(e);
             DrawPack(e);
+            DrawProjectile(e);
             
              if (model.gamestatus != gamestatus.playing)
                 return;
@@ -53,11 +54,17 @@ namespace PR11_OrlovME
             Invalidate();
         }
 
+        public void DrawProjectile(PaintEventArgs e)
+        {
+            e.Graphics.DrawImage(model.Projectile.Img, new Point(model.Projectile.X, model.Projectile.Y));
+        }
+
         private void DrawPack(PaintEventArgs e)
         {
            
                 e.Graphics.DrawImage(model.PAck.CurrentImg, new Point(model.PAck.X, model.PAck.Y));
         }
+    
 
         protected override void OnPaint(PaintEventArgs e)
         {

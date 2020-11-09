@@ -262,4 +262,28 @@
   <data name="Hunterup3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\hunteranim\up\hunterup3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Cartridge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cartridge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cartridgedown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cartridgedown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cartridgeright" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cartridgeright.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cartridgetop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cartridgetop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="firedown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\firedown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fireleft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fireleft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fireright" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fireright.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="firetopt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\firetopt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

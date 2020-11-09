@@ -58,6 +58,8 @@
     <Compile Include="class\Model.cs" />
     <Compile Include="class\Hunter.cs" />
     <Compile Include="ClassImg\HunterIMG.cs" />
+    <Compile Include="FireTank.cs" />
+    <Compile Include="FiretankIMG.cs" />
     <Compile Include="interface\ICurrentPicture.cs" />
     <Compile Include="interface\ITurn.cs" />
     <Compile Include="interface\IRun.cs" />
@@ -67,6 +69,8 @@
     <Compile Include="ClassImg\PackIMG.cs" />
     <Compile Include="class\Packman.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Projectile.cs" />
+    <Compile Include="ProjectileIMG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClassImg\PudgeImg.cs" />
     <Compile Include="class\Pudge.cs" />
@@ -124,6 +128,14 @@
     <Content Include="Resources\anim\up\tank2t.png" />
     <Content Include="Resources\anim\up\tank3.png" />
     <Content Include="Resources\anim\up\tank4.png" />
+    <None Include="Resources\Cartridge.png" />
+    <None Include="Resources\Cartridgeright.png" />
+    <None Include="Resources\Cartridgedown.png" />
+    <None Include="Resources\Cartridgetop.png" />
+    <None Include="Resources\fireright.png" />
+    <None Include="Resources\firedown.png" />
+    <None Include="Resources\fireleft.png" />
+    <None Include="Resources\firetopt.png" />
     <Content Include="Resources\hunteranim\down\Hunterdown.png" />
     <Content Include="Resources\hunteranim\down\Hunterdown2.png" />
     <Content Include="Resources\hunteranim\down\Hunterdown3.png" />
@@ -156,10 +168,8 @@
     <None Include="Resources\Pack11.gif" />
     <None Include="Resources\Pack1.gif" />
     <None Include="Resources\Pack.gif" />
-    <None Include="Resources\Pack.png" />
     <None Include="Resources\Packmen.bmp" />
     <None Include="Resources\coin.gif" />
-    <None Include="Resources\coin.bmp" />
     <None Include="Resources\Image1.gif" />
     <None Include="Resources\tanklef2.png" />
     <None Include="Resources\tank4.png" />

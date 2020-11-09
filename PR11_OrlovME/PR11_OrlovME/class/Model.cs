@@ -19,9 +19,10 @@ namespace PR11_OrlovME
 
         List<Pudge> tanks;
         List<Coin> coins;
+        List<FireTank> fires;
         Packman packman;
 
-
+        Projectile projectile;
 
 
 
@@ -32,19 +33,24 @@ namespace PR11_OrlovME
 
         internal List<Pudge> Tanks
         {
-            get { return tanks; }
-
+            get => tanks;
         }
         internal List<Coin> Coins
         {
-            get { return coins; }
-
+            get => coins;
         }
         internal Packman PAck
         {
-            get { return packman; }
-
+            get => packman;
         }
+
+        internal Projectile Projectile
+        {
+            get => projectile;
+        }
+        internal List<FireTank> Fires
+        { get => fires; }
+
         public Model(int sizeField, int amounttanks, int amountapples, int speedgame)
         {
             this.sizeField = sizeField; // передаем в поля переданные данные
@@ -55,6 +61,8 @@ namespace PR11_OrlovME
             this.speedgame = speedgame;
             tanks = new List<Pudge>();
             coins = new List<Coin>();
+            fires = new List<FireTank>();
+            projectile = new Projectile();
             CreateCoin();
             CreateTanks();
 
@@ -93,7 +101,7 @@ namespace PR11_OrlovME
 
             //// Задание начальных координат танка
             int x, y;
-            while (tanks.Count < amounttanks)
+            while (tanks.Count < amounttanks + 1)
             {
 
                 if (tanks.Count == 0)
@@ -122,26 +130,39 @@ namespace PR11_OrlovME
             {
                 Thread.Sleep(speedgame);
 
-                ((Hunter)tanks[0]).Runn(packman.X,packman.Y);
-                for(int i =1; i < tanks.Count; i++)
+                ((Hunter)tanks[0]).Runn(packman.X, packman.Y);
+
+                for (int i = 1; i < tanks.Count; i++)
                     tanks[i].run();
 
 
                 packman.run();
+                projectile.Run();
 
+                foreach (FireTank ft in fires)
+                    ft.Fire();
 
                 for (int i = 0; i < tanks.Count - 1; i++)
                     for (int j = i + 1; j < tanks.Count; j++)
+                    {
                         if (
-                                 ((Math.Abs(tanks[i].X - tanks[j].X) <= 20) && (tanks[i].Y == tanks[j].Y))
-                             ||
-                                 ((Math.Abs(tanks[i].Y - tanks[j].Y) <= 20) && (tanks[i].X == tanks[j].X))
-                             ||
-                                 ((Math.Abs(tanks[i].X - tanks[j].X) <= 20) && (Math.Abs(tanks[i].Y - tanks[j].Y) <= 20)))
+                                   ((Math.Abs(tanks[i].X - tanks[j].X) <= 20) && (tanks[i].Y == tanks[j].Y))
+                               ||
+                                   ((Math.Abs(tanks[i].Y - tanks[j].Y) <= 20) && (tanks[i].X == tanks[j].X))
+                               ||
+                                   ((Math.Abs(tanks[i].X - tanks[j].X) <= 20) && (Math.Abs(tanks[i].Y - tanks[j].Y) <= 20))
+
+                               )
                         {
-                            tanks[i].TurnArround();
+                            if (i == 0)
+                                ((Hunter)tanks[i]).TurnArround();
+                            else
+                                tanks[i].TurnArround();
+
                             tanks[j].TurnArround();
+
                         }
+                    }
 
                 for (int i = 0; i < tanks.Count; i++)
                     if (
@@ -151,6 +172,7 @@ namespace PR11_OrlovME
                            ||
                                ((Math.Abs(tanks[i].X - packman.X) <= 19) && (Math.Abs(tanks[i].Y - packman.Y) <= 19)))
                     {
+
                         gamestatus = gamestatus.loozer;
                     }
 
@@ -168,7 +190,7 @@ namespace PR11_OrlovME
                 }
 
                 if (collectionsapple > amountapples) gamestatus = gamestatus.winner;
-                
+
             }
 
         }

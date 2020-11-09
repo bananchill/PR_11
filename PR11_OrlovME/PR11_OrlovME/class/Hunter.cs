@@ -11,44 +11,74 @@ namespace PR11_OrlovME
 
         int target_x, target_y;
 
-        HunterIMG pudgeImg = new HunterIMG();
+        HunterIMG hunterimg = new HunterIMG();
 
-        public Hunter(int sizefield, int x, int y) : base(sizefield, x, y) { }
-        
+
         private void PutImg()
         {
 
             if (Direct_x == 1)
-                img = pudgeImg.Imgright;
+                img = hunterimg.Imgright;
             if (Direct_x == -1)
-                img = pudgeImg.Imgup;
+                img = hunterimg.Imgup;
             if (Direct_y == 1)
-                img = pudgeImg.ImgDown;
+                img = hunterimg.ImgDown;
             if (Direct_y == -1)
-                img = pudgeImg.Imgleft;
+                img = hunterimg.Imgleft;
         }
 
-        new public void Turn(int x, int y)
+
+
+        new public void TurnArround()
         {
-
-
+            // Разворот на 180 
+            Direct_x = -1 * Direct_x;
+            Direct_y = -1 * Direct_y;
+            PutImg();
         }
 
-        new public void Runn(int x, int y)
+        public void Turn(int target_x, int target_y)
+        {
+            Direct_y = Direct_x = 0;
+            if (X > target_x)
+                Direct_x = -1;
+            if (X < target_x)
+                Direct_x = 1;
+            if (Y > target_y)
+                Direct_y = -1;
+            if (Y < target_y)
+                Direct_y = 1;
+
+            if (Direct_x != 0 && Direct_y != 0)
+                if (r.Next(5000) < 2500)
+                    Direct_x = 0;
+                else
+                    Direct_y = 0;
+            PutImg();
+        }
+
+        public void Runn(int target_x, int target_y)
         {
 
-            target_x = x;
-            target_y = y;
-            y += Direct_x;
-            x += Direct_y;
-            if (Math.IEEERemainder(x, 40) == 0 && Math.IEEERemainder(y, 40) == 0)
+            x += Direct_x;
+            y += Direct_y;
+
+            if (Math.IEEERemainder(x, 40) == 0 && (Math.IEEERemainder(y, 40) == 0))
             {
-                Turn();
-
+                Turn(target_x, target_y);
             }
             PutCurrentImg();
             Transparent();
 
+        }
+
+        public Hunter(int sizefield, int x, int y) 
+            : base(sizefield, x, y)
+        {
+            Direct_y = -1;
+            Direct_x = 0;
+            PutImg();
+            PutCurrentImg();
         }
     }
 

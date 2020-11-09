@@ -35,23 +35,22 @@ namespace PR11_OrlovME
         {
             get { return currentimg; }
         }
+
         public Image[] Img
         {
             get { return img; }
-
         }
 
         public int X
         {
             get { return x; }
-
         }
 
         public int Y
         {
             get { return y; }
-
         }
+
         public int Direct_x
         {
             get { return direct_y; }
@@ -61,7 +60,6 @@ namespace PR11_OrlovME
                     direct_y = value;
                 else
                     direct_y = 0;
-
             }
         }
         public int NextDirect_x
@@ -88,6 +86,7 @@ namespace PR11_OrlovME
 
             }
         }
+
         public int Direct_y
         {
             get { return direct_x; }

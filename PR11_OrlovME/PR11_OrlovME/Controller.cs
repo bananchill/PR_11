@@ -112,37 +112,34 @@ namespace PR11_OrlovME
                     }
                     break;
                 default:
-                    //{
+                    {
 
-                    //    model.Projectile.Direct_x = model.PAck.Direct_x;
-                    //    model.Projectile.Direct_y = model.PAck.Direct_y;
+                        model.Projectile.Direct_x = model.PAck.Direct_x;
+                        model.Projectile.Direct_y = model.PAck.Direct_y;
 
-                    //    model.Projectile.X = model.PAck.X;
-                    //    model.Projectile.Y = model.PAck.Y;
+                        if (model.PAck.Direct_y == -1)
+                        {
+                            model.Projectile.X = model.PAck.X;
+                            model.Projectile.Y = model.PAck.Y+10;
 
-                    //    if (model.Sonic.Direct_y == -1)
-                    //    {
-                    //        model.Projectile.X = model.PAck.X + 2;
-                    //        model.Projectile.Y = model.PAck.Y;
+                        }
+                        if (model.PAck.Direct_y == 1)
+                        {
+                            model.Projectile.X = model.PAck.X + 5;
+                            model.Projectile.Y = model.PAck.Y + 10;
+                        }
+                        if (model.PAck.Direct_x == -1)
+                        {
+                            model.Projectile.X = model.PAck.X + 10;
+                            model.Projectile.Y = model.PAck.Y;
+                        }
+                        if (model.PAck.Direct_x == 1)
+                        {
+                            model.Projectile.X = model.PAck.X + 10;
+                            model.Projectile.Y = model.PAck.Y + 5;
+                        }
 
-                    //    }
-                    //    if (model.Sonic.Direct_y == 1)
-                    //    {
-                    //        model.Projectile.X = model.PAck.X + 2;
-                    //        model.Projectile.Y = model.PAck.Y;
-                    //    }
-                    //if (model.Sonic.Direct_x == -1)
-                    //{
-                    //    model.Projectile.X = model.Sonic.X;
-                    //    model.Projectile.Y = model.Sonic.Y + 10;
-                    //}
-                    //if (model.Sonic.Direct_x == 1)
-                    //{
-                    //    model.Projectile.X = model.Sonic.X + 20;
-                    //    model.Projectile.Y = model.Sonic.Y + 10;
-                    //}
-
-                    //}
+                    }
                     break;
             }
         }
@@ -151,5 +148,7 @@ namespace PR11_OrlovME
         {
             StartstopButton.Focus();
         }
+
     }
 }
+

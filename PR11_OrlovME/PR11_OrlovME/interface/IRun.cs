@@ -9,5 +9,6 @@ namespace PR11_OrlovME
     interface IRun
     {
         void run();
+
     }
 }

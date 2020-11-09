@@ -18,8 +18,8 @@ namespace PR11_OrlovME
         PudgeImg pudgeImg = new PudgeImg();
 
         protected static Random r;
-         protected int k = 0;
-    private void PutImg()
+        protected int k = 0;
+        private void PutImg()
         {
 
             if (Direct_x == 1)
@@ -121,7 +121,7 @@ namespace PR11_OrlovME
         {
             currentimg = img[k];
             k++;
-            if (k == 4)
+            if (k <= 4)
                 k = 0;
         }
 
