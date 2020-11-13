@@ -58,8 +58,8 @@
     <Compile Include="class\Model.cs" />
     <Compile Include="class\Hunter.cs" />
     <Compile Include="ClassImg\HunterIMG.cs" />
-    <Compile Include="FireTank.cs" />
-    <Compile Include="FiretankIMG.cs" />
+    <Compile Include="class\FireTank.cs" />
+    <Compile Include="ClassImg\FiretankIMG.cs" />
     <Compile Include="interface\ICurrentPicture.cs" />
     <Compile Include="interface\ITurn.cs" />
     <Compile Include="interface\IRun.cs" />
@@ -69,8 +69,8 @@
     <Compile Include="ClassImg\PackIMG.cs" />
     <Compile Include="class\Packman.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Projectile.cs" />
-    <Compile Include="ProjectileIMG.cs" />
+    <Compile Include="class\Projectile.cs" />
+    <Compile Include="ClassImg\ProjectileIMG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClassImg\PudgeImg.cs" />
     <Compile Include="class\Pudge.cs" />
@@ -112,6 +112,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\SoundOFF.png" />
+    <None Include="Resources\SoundOn.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\settt.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\wPM8ZqviI5U.png" />
+    <None Include="Resources\2.png" />
     <Content Include="Resources\anim\down\tankdown 4.png" />
     <Content Include="Resources\anim\down\tankdown.png" />
     <Content Include="Resources\anim\down\tankdown2.png" />
@@ -136,6 +143,13 @@
     <None Include="Resources\firedown.png" />
     <None Include="Resources\fireleft.png" />
     <None Include="Resources\firetopt.png" />
+    <None Include="Resources\fireleft1.png" />
+    <None Include="Resources\fireleft2.png" />
+    <None Include="Resources\fireright1.png" />
+    <None Include="Resources\firetopt1.png" />
+    <None Include="Resources\fireleft11.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\david-garrett-confutatis.wav" />
     <Content Include="Resources\hunteranim\down\Hunterdown.png" />
     <Content Include="Resources\hunteranim\down\Hunterdown2.png" />
     <Content Include="Resources\hunteranim\down\Hunterdown3.png" />

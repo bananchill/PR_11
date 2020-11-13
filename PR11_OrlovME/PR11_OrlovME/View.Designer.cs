@@ -35,7 +35,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Coral;
+            this.Location = new System.Drawing.Point(0, 20);
             this.Name = "View";
             this.Size = new System.Drawing.Size(260, 320);
             this.ResumeLayout(false);
